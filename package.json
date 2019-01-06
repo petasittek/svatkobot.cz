@@ -1,0 +1,15 @@
+{
+  "name": "svatkobot",
+  "private": true,
+  "scripts": {
+    "develop": "parcel watch src/index.html --out-dir /app/build-dev --cache-dir /app/cache --no-source-maps --no-hmr",
+    "build": "parcel build src/index.html --out-dir /app/build-prod --no-source-maps"
+  },
+  "dependencies": {
+    "js-yaml": "3.12.1",
+    "parcel-bundler": "1.10.3",
+    "preact": "8.4.2",
+    "sass": "1.15.2",
+    "tachyons": "4.11.1"
+  }
+}

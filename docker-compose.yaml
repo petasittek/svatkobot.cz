@@ -1,0 +1,11 @@
+version: "3.2"
+
+services:
+  app:
+    build: .
+    volumes:
+    - ./package.json:/app/package.json
+    - ./src:/app/src
+    - ./build-dev:/app/build-dev
+    - ./build-prod:/app/build-prod
+    - ./cache:/app/cache
