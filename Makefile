@@ -12,7 +12,7 @@ build: clean-build
 
 .PHONY: build-netlify
 build-netlify: clean-build
-	npm run build
+	npm run build-netlify
 
 .PHONY: develop
 develop: clean-develop

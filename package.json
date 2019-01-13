@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "develop": "parcel watch src/index.html --out-dir /app/build-dev --cache-dir /app/cache --no-source-maps --no-hmr",
-    "build": "parcel build src/index.html --out-dir /app/build-prod --no-source-maps"
+    "build": "parcel build src/index.html --out-dir /app/build-prod --no-source-maps",
+    "build-netlify": "parcel build src/index.html --out-dir ./build-prod --no-source-maps"
   },
   "dependencies": {
     "js-yaml": "3.12.1",
