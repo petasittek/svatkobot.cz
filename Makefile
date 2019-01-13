@@ -10,6 +10,10 @@ prebuild: clean
 build: clean-build
 	docker-compose run app yarn build
 
+.PHONY: build-netlify
+build-netlify: clean-build
+	yarn build
+
 .PHONY: develop
 develop: clean-develop
 	docker-compose run app ls -l /app/src
