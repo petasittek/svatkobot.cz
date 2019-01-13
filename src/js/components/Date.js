@@ -5,6 +5,11 @@ import {getRandomEmoji} from "../utils/emoji";
 
 export default class Date extends Component {
 
+  shouldComponentUpdate(nextProps, nextState) {
+    // Keep static until any relevant feature comes
+    return false;
+  }
+
   renderNames(namedays, names) {
     return namedays.map(name => {
         let sex = names[name] && names[name].sex;
