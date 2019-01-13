@@ -1,4 +1,4 @@
-# Svátkobot
+# 🎉 SvátkoBOT
 
 
 ## Development
