@@ -12,7 +12,7 @@ build: clean-build
 
 .PHONY: build-netlify
 build-netlify: clean-build
-	yarn build
+	npm run build
 
 .PHONY: develop
 develop: clean-develop
