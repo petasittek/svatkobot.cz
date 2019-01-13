@@ -19,7 +19,7 @@ export default class App extends Component {
     super();
 
     this.state = {
-      calendarShown: true,
+      calendarShown: false,
     };
 
     this.toggleCalendar = this.toggleCalendar.bind(this);
