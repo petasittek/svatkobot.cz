@@ -7,7 +7,7 @@ const MONTHS = {
   2: {
     name: 'února',
     slug: 'unora',
-    emoji: '⛄️',
+    emoji: '🏂',
   },
   3: {
     name: 'března',
@@ -17,7 +17,7 @@ const MONTHS = {
   4: {
     name: 'dubna',
     slug: 'dubna',
-    emoji: '🤪',
+    emoji: '🐥',
   },
   5: {
     name: 'května',
@@ -37,7 +37,7 @@ const MONTHS = {
   8: {
     name: 'srpna',
     slug: 'srpna',
-    emoji: '🌴',
+    emoji: '🌾',
   },
   9: {
     name: 'září',
