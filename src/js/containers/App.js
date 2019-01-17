@@ -36,8 +36,6 @@ export default class App extends Component {
   }
 
   render() {
-    document.title = getTodayAnchor();
-
     return (
       <div>
         {dates.map(date => <Date date={date} names={names} key={date.day}/>)}
