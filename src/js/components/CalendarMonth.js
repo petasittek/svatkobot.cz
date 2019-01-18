@@ -1,17 +1,17 @@
 import {h, Component} from 'preact';
 
-import {getMonthAnchor, getMonthEmoji, getMonthFirstLetter} from '../utils/date';
+import {getMonthAnchor, getMonthEmoji, getMonthFirstLetter, getMonthName} from '../utils/date';
 
 export default class CalendarMonth extends Component {
 
   render({ month }) {
     let emoji = getMonthEmoji(month);
-    let letter = getMonthFirstLetter(month).toUpperCase();
+    let name = getMonthName(month);
     let anchor = getMonthAnchor(month);
 
     return (
-      <a class="db f3sd link pa2 gray" href={`#${anchor}`}>
-        {emoji} {letter}
+      <a class="calendar__item db link pa2 br2 gray hover-bg-lightest-blue" href={`#${anchor}`}>
+        {name} {emoji}
       </a>
     )
   }

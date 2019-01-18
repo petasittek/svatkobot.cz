@@ -1,42 +1,42 @@
 const MONTHS = {
   1: {
-    name: 'ledna',
-    slug: 'ledna',
+    name: 'leden',
+    slug: 'leden',
     emoji: '❄️',
   },
   2: {
-    name: 'února',
-    slug: 'unora',
+    name: 'únor',
+    slug: 'unor',
     emoji: '🏂',
   },
   3: {
-    name: 'března',
-    slug: 'brezna',
+    name: 'březen',
+    slug: 'brezen',
     emoji: '🌱',
   },
   4: {
-    name: 'dubna',
-    slug: 'dubna',
+    name: 'duben',
+    slug: 'duben',
     emoji: '🐥',
   },
   5: {
-    name: 'května',
-    slug: 'kvetna',
+    name: 'květen',
+    slug: 'kveten',
     emoji: '❤️',
   },
   6: {
-    name: 'června',
-    slug: 'cervna',
+    name: 'červen',
+    slug: 'cerven',
     emoji: '🌻',
   },
   7: {
-    name: 'července',
-    slug: 'cervence',
+    name: 'červenec',
+    slug: 'cervenec',
     emoji: '☀️',
   },
   8: {
-    name: 'srpna',
-    slug: 'srpna',
+    name: 'srpen',
+    slug: 'srpen',
     emoji: '🌾',
   },
   9: {
@@ -45,18 +45,18 @@ const MONTHS = {
     emoji: '🎓',
   },
   10: {
-    name: 'října',
-    slug: 'rijna',
+    name: 'říjen',
+    slug: 'rijen',
     emoji: '⛅️',
   },
   11: {
-    name: 'listopadu',
-    slug: 'listopadu',
+    name: 'listopad',
+    slug: 'listopad',
     emoji: '🍂',
   },
   12: {
-    name: 'prosince',
-    slug: 'prosince',
+    name: 'prosinec',
+    slug: 'prosinec',
     emoji: '🎅🏻',
   },
 };
@@ -77,7 +77,7 @@ export const getMonthAnchor = month => `1.${MONTHS[month].slug}`;
 
 export const getMonthEmoji = month => MONTHS[month].emoji;
 
-export const getMonthFirstLetter = month => MONTHS[month].name.substring(0, 1);
+export const getMonthName = month => MONTHS[month].name;
 
 export const getTodayAnchor = () => {
   let iso = (new Date()).toISOString().split('T')[0].slice(-5);

@@ -36,12 +36,11 @@ export default class Date extends Component {
     let todayAnchor = getTodayAnchor();
 
     return (
-      <article id={dateAnchor} class="bb b--moon-gray pt3 pb1 ph2">
+      <article id={dateAnchor} class={`bb b--moon-gray pt3 pb1 ph2 ${dateAnchor === todayAnchor && 'nameday-today'}`}>
         <a href={`#${dateAnchor}`} class="link dark-gray">
           <time datetime={date.day} class="f5 b">
             {dateText}
           </time>
-          {dateAnchor === todayAnchor && <span class="ml2">🎉</span>}
         </a>
         <ul class="list ma0 ph0 pv2">
           {this.renderNames(date.names, names)}

@@ -1,0 +1,12 @@
+.nameday-today {
+  position: relative;
+}
+
+.nameday-today:after {
+  content: "🎉";
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 3.5rem;
+  z-index: -1;
+}

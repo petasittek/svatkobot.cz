@@ -40,16 +40,18 @@ export default class App extends Component {
       <div>
         {dates.map(date => <Date date={date} names={names} key={date.day}/>)}
 
-        <div class="scrollers bg-white tc br2">
+        <div class="scrollers bg-white tr br2">
           <div class={this.state.calendarShown ? 'db' : 'dn'}>
-            <div class="scrollers-calendar">
+            <div class="scrollers-calendar calendar">
               {this.renderCalendar()}
             </div>
-            <div class="bb mv1"></div>
+            <div class="bb b--moon-gray mv2"></div>
           </div>
-          <a class="db f3sd link pv2 ph3 gray hover-bg-lightest-blue" href="#/">☝️</a>
-          <a class="db f3sd link pv2 ph3 gray hover-bg-lightest-blue" href={`#${getTodayAnchor()}`}>🎉</a>
-          <a class="db f3sd link pv2 ph3 gray pointer hover-bg-lightest-blue" onClick={this.toggleCalendar}>📅</a>
+          <div>
+            <a class="dib f3 link pv2 ph3 br2 gray hover-bg-lightest-blue" href="#/">☝️</a>
+            <a class="dnb f3 link pv2 ph3 br2 gray hover-bg-lightest-blue" href={`#${getTodayAnchor()}`}>🎉</a>
+            <a class="dib f3 link pv2 ph3 br2 gray pointer hover-bg-lightest-blue" onClick={this.toggleCalendar}>📅</a>
+          </div>
         </div>
       </div>
     )
