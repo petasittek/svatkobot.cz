@@ -1,6 +1,7 @@
 import {h, Component} from 'preact';
 
 import {getMonthAnchor, getMonthEmoji, getMonthFirstLetter, getMonthName} from '../utils/date';
+import {scrollToIdByEvent} from "../utils/scroll";
 
 export default class CalendarMonth extends Component {
 
@@ -10,9 +11,9 @@ export default class CalendarMonth extends Component {
     let anchor = getMonthAnchor(month);
 
     return (
-      <a class="calendar__item db link pa2 br2 gray hover-bg-lightest-blue" href={`#${anchor}`}>
+      <button class="calendar__item db bw0 pa2 br2 w-100 tr pointer gray hover-bg-lightest-blue" data-scrollid={anchor} onClick={scrollToIdByEvent}>
         {name} {emoji}
-      </a>
+      </button>
     )
   }
 

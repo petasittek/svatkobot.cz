@@ -1,3 +1,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+button:focus {
+  outline: 0;
+}

@@ -6,6 +6,7 @@ import jsyaml from 'js-yaml';
 import CalendarMonth from "../components/CalendarMonth";
 import Date from '../components/Date';
 import {getTodayAnchor} from '../utils/date';
+import {scrollToIdByEvent} from "../utils/scroll";
 
 let datesYaml = fs.readFileSync('./src/data/dates.yaml', 'utf8');
 let dates = jsyaml.safeLoad(datesYaml);
@@ -45,12 +46,12 @@ export default class App extends Component {
             <div class="scrollers-calendar calendar">
               {this.renderCalendar()}
             </div>
-            <div class="bb b--moon-gray mv2"></div>
+            <div class="bb b--moon-gray mv1"></div>
           </div>
           <div>
-            <a class="dib f3 link pv2 ph3 br2 gray hover-bg-lightest-blue" href="#/">☝️</a>
-            <a class="dnb f3 link pv2 ph3 br2 gray hover-bg-lightest-blue" href={`#${getTodayAnchor()}`}>🎉</a>
-            <a class="dib f3 link pv2 ph3 br2 gray pointer hover-bg-lightest-blue" onClick={this.toggleCalendar}>📅</a>
+            <button class="dib pointer bw0 f3 ma12 pv2 ph3 br2 gray hover-bg-lightest-blue" data-scrollid="top" onClick={scrollToIdByEvent}>☝️</button>
+            <button class="dib pointer bw0 f3 ma12 pv2 ph3 br2 gray hover-bg-lightest-blue" data-scrollid={getTodayAnchor()} onClick={scrollToIdByEvent}>🎉</button>
+            <button class="dib pointer bw0 f3 ma12 pv2 ph3 br2 gray pointer hover-bg-lightest-blue" onClick={this.toggleCalendar}>📅</button>
           </div>
         </div>
       </div>
