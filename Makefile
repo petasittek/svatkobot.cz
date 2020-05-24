@@ -16,8 +16,7 @@ build-netlify: clean-build
 
 .PHONY: develop
 develop: clean-develop
-	docker-compose run app ls -l /app/src
-	docker-compose run app yarn develop
+	docker-compose run --service-ports app yarn develop
 
 .PHONY: clean
 clean: clean-build clean-develop

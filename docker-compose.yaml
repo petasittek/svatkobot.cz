@@ -3,6 +3,8 @@ version: "3.2"
 services:
   app:
     build: .
+    ports:
+      - 8080:1234
     volumes:
     - ./package.json:/app/package.json
     - ./src:/app/src
