@@ -63,23 +63,15 @@
 
 <script src="js/index.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Plausible -->
 <script>
   (() => {
     if (window.location.hostname === 'svatkobot.cz') {
-      const ID = 'UA-132424090-1';
-
-      // Load GTM
-      let script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${ID}`;
-      document.head.appendChild(script);
-
-      // Configure GTM
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', ID);
+      let scriptEl = document.createElement('script');
+      scriptEl.defer = true;
+      scriptEl.dataset.domain = 'svatkobot.cz';
+      scriptEl.src = 'https://plausible.io/js/plausible.outbound-links.js';
+      document.head.appendChild(scriptEl);
     }
   })()
 </script>
