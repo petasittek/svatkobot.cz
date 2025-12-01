@@ -9,10 +9,10 @@ import {getTodayAnchor} from '../utils/date';
 import {scrollToIdByEvent} from "../utils/scroll";
 
 let datesYaml = fs.readFileSync('./src/data/dates.yaml', 'utf8');
-let dates = jsyaml.safeLoad(datesYaml);
+let dates = jsyaml.load(datesYaml);
 
 let namesYaml = fs.readFileSync('./src/data/names.yaml', 'utf8');
-let names = jsyaml.safeLoad(namesYaml);
+let names = jsyaml.load(namesYaml);
 
 export default class App extends Component {
 
@@ -28,7 +28,7 @@ export default class App extends Component {
 
   renderCalendar() {
     return Array.from(new Array(12), (value, index) => index + 1)
-      .map(month => <CalendarMonth key={month} month={month}/>);
+      .map(month => <CalendarMonth key={month} month={month}/>) ;
   }
 
   toggleCalendar(ev) {
@@ -39,12 +39,12 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        {dates.map(date => <Date date={date} names={names} key={date.day}/>)}
+        {dates.map(date => <Date date={date} names={names} key={date.day}/>) }
 
         <div class="scrollers bg-white tr br2">
           <div class={this.state.calendarShown ? 'db' : 'dn'}>
             <div class="scrollers-calendar calendar">
-              {this.renderCalendar()}
+              {this.renderCalendar()} 
             </div>
             <div class="bb b--moon-gray mv1"></div>
           </div>
@@ -57,5 +57,4 @@ export default class App extends Component {
       </div>
     )
   }
-
 }
